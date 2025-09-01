@@ -62,7 +62,7 @@
    "}"
    "async function sendChunk(){"
    "const raw = document.getElementById('chunk').value;"
-   "const chunk = JSON.parse('\"'+raw.replaceAll('\\\\','\\\\\\\\').replaceAll('\"','\\\\\"')+'\"');"
+   "const chunk = JSON.parse('\"'+raw.replace(/\\\\/g,'\\\\\\\\').replace(/\"/g,'\\\\\"')+'\"');"
    "await fetch('/ingest',{method:'POST',headers:{'content-type':'text/plain'},body:chunk});"
    "document.getElementById('chunk').value='';"
    "await fetchHtml();"

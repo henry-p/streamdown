@@ -2,6 +2,13 @@
     "mcpServers": {
         "context7": {
             "url": "https://mcp.context7.com/mcp"
+        },
+        "chrome-mcp-stdio": {
+            "command": "npx",
+            "args": [
+                "node",
+                "/Users/henry/.nvm/versions/node/v22.13.1/lib/node_modules/mcp-chrome-bridge/dist/mcp/mcp-server-stdio.js"
+            ]
         }
     }
 }
